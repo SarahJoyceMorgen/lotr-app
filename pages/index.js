@@ -1,9 +1,36 @@
 import { introduction } from "@/resources/lib/data";
+import {volumes} from "@/resources/lib/data";
+import Link from "next/link";
 
-export default function HomePage() {
+
+export default function Volumes() {
   return (
-    <div>
-      <h1>Herr der Ringe</h1>
-    </div>
+    <>
+      <h1>Lord of the Rings</h1>
+      <p>{introduction}</p>
+      <h2>All Volumes</h2>
+      <ul>
+        <li>
+          <Link href="/volumes">Volumes</Link>
+        </li>
+        <li>
+          <Link href="/volumes/the-fellowship-of-the-ring">
+            Volume 1: The Fellowship of the Ring
+          </Link>
+        </li>
+        <li>
+          <Link href="/volumes/the-two-towers">Volume 2: The Two Towers</Link>
+        </li>
+        <li>
+          <Link href="/volumes/the-return-of-the-king">
+            Volume 3: The Return of the King
+          </Link>
+        </li>
+      </ul>
+    </>
   );
 }
+
+
+
+
